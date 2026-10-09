@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #090b18;
+  color: #f6f4ff;
+}
+
+.orb {
+  position: fixed;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: .38;
+  pointer-events: none;
+  animation: float 9s ease-in-out infinite alternate;
+}
+
+.orb-one {
+  background: #7846ff;
+  top: -100px;
+  left: -100px;
+}
+
+.orb-two {
+  background: #00cdb8;
+  right: -100px;
+  bottom: -100px;
+  animation-delay: -4s;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 18px;
+  position: relative;
+}
+
+.login-card {
+  width: min(100%, 420px);
+  padding: 34px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 25px;
+  background: rgba(255,255,255,.065);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 25px 90px #0005;
+  animation: appear .8s ease both;
+}
+
+.brand {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.brand span {
+  color: #b9a0ff;
+  font-size: 24px;
+  vertical-align: -2px;
+}
+
+.tag {
+  margin-top: 27px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #b4a5f6;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  margin-top: 27px;
+  border-radius: 18px;
+  border: 1px solid #ffffff28;
+  background: linear-gradient(135deg, #8b5cf6, #17bdb3);
+  font-size: 30px;
+  box-shadow: 0 8px 35px #8b5cf633;
+}
+
+h1 {
+  margin-top: 24px;
+  font-size: clamp(28px, 7vw, 36px);
+  letter-spacing: -1.5px;
+}
+
+h1 span {
+  color: #a88aff;
+}
+
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 13px;
+  color: #aaaabd;
+}
+
+form > label,
+.password-heading label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #dedbea;
+}
+
+input[type="email"],
+input[type="password"],
+#password {
+  width: 100%;
+  height: 49px;
+  padding: 0 14px;
+  margin-bottom: 22px;
+  border: 1px solid #ffffff20;
+  border-radius: 11px;
+  outline: none;
+  background: #ffffff08;
+  color: white;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color .25s, box-shadow .25s;
+}
+
+input:focus {
+  border-color: #a88aff;
+  box-shadow: 0 0 0 3px #a88aff20;
+}
+
+input::placeholder {
+  color: #77768e;
+}
+
+.password-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-heading button {
+  margin-bottom: 9px;
+  border: 0;
+  background: transparent;
+  color: #bca7ff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -4px;
+  margin-bottom: 23px;
+  font-size: 11px;
+  color: #bdb9ce;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.hint {
+  color: #a79abf;
+}
+
+.submit-btn {
+  width: 100%;
+  min-height: 49px;
+  padding: 0 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  border-radius: 11px;
+  background: linear-gradient(100deg, #8b5cf6, #6f70f9);
+  color: white;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px #805cf650;
+}
+
+#message {
+  min-height: 16px;
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #a9f5db;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 23px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff17;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #88859f;
+}
+
+.bottom strong {
+  color: #d9d0ff;
+  font-size: 10px;
+}
+
+.outside-note {
+  margin-top: 20px;
+  color: #77768e;
+  font-size: 10px;
+  text-align: center;
+}
+
+@keyframes float {
+  to { transform: translate(45px, 35px) scale(1.15); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .login-card { padding: 27px 22px; }
+  .page { padding: 22px 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

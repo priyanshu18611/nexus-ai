@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b18">
+  <title>Day 01 | Glass Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <main class="page">
+    <section class="login-card">
+      <div class="brand"><span>✦</span> AURA</div>
+      <div class="tag">DAY 01 / 100 — CREATIVE WEB</div>
+
+      <div class="avatar">✧</div>
+      <h1>Welcome back<span>.</span></h1>
+      <p class="subtitle">Your next chapter starts here.</p>
+
+      <form id="loginForm">
+        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+
+        <div class="password-heading">
+          <label for="password">Password</label>
+          <button type="button" id="togglePassword">Show</button>
+        </div>
+        <input id="password" type="password"
+          placeholder="Enter your password" minlength="6" required>
+
+        <div class="options">
+          <label class="remember">
+            <input type="checkbox" id="remember">
+            <span>Remember me</span>
+          </label>
+          <span class="hint">Demo UI</span>
+        </div>
+
+        <button class="submit-btn" type="submit">
+          <span>Sign in</span><span>↗</span>
+        </button>
+        <p id="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="bottom">
+        <span>DESIGNED & CODED BY</span>
+        <strong>PRIYANSHU KUMAR</strong>
+      </div>
+    </section>
+    <p class="outside-note">A little creativity changes everything.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
